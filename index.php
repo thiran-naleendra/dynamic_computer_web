@@ -256,20 +256,7 @@ $waLink = 'https://wa.me/' . $waNumber;
                         </div>
                     </div>
 
-                    <!-- Partner strip -->
-                    <div class="mt-10">
-                        <div class="text-blue-100 text-sm font-semibold mb-3">CCTV Partners</div>
-                        <div class="flex items-center gap-4">
-                            <div class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 flex items-center gap-3">
-                                <img src="assets/images/partners/hikvision.png" alt="Hikvision" class="h-6 w-auto">
-                                <span class="text-white text-sm font-semibold">Hikvision</span>
-                            </div>
-                            <div class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 flex items-center gap-3">
-                                <img src="assets/images/partners/uniarch.png" alt="Uniarch" class="h-6 w-auto">
-                                <span class="text-white text-sm font-semibold">Uniarch</span>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 <!-- Hero image card -->
@@ -386,7 +373,7 @@ $waLink = 'https://wa.me/' . $waNumber;
                 </div>
 
                 <div class="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-red-200 hover:shadow-2xl transition">
-                    <img src="assets/images/products/cctv.jpg" alt="CCTV Cameras" class="w-full h-44 object-cover" loading="lazy">
+                    <img src="https://ipmgroupuk.com/wp-content/uploads/2024/07/4K-Cameras.webp" alt="CCTV Cameras" class="w-full h-44 object-cover" loading="lazy">
                     <div class="p-7">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center">
@@ -406,7 +393,7 @@ $waLink = 'https://wa.me/' . $waNumber;
                 </div>
 
                 <div class="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-teal-200 hover:shadow-2xl transition">
-                    <img src="assets/images/products/networking.jpg" alt="Networking" class="w-full h-44 object-cover" loading="lazy">
+                    <img src="https://images.pexels.com/photos/2881233/pexels-photo-2881233.jpeg" alt="Networking" class="w-full h-44 object-cover" loading="lazy">
                     <div class="p-7">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center">
@@ -427,7 +414,7 @@ $waLink = 'https://wa.me/' . $waNumber;
 
                 <!-- Extra creative card (NEW) -->
                 <div class="group bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden border border-gray-800 hover:shadow-2xl transition">
-                    <img src="assets/images/products/service-counter.jpg" alt="Shop Service Desk" class="w-full h-44 object-cover opacity-90" loading="lazy">
+                    <img src="https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg" alt="Shop Service Desk" class="w-full h-44 object-cover opacity-90" loading="lazy">
                     <div class="p-7">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
@@ -982,17 +969,13 @@ $waLink = 'https://wa.me/' . $waNumber;
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center">
-                            <i data-lucide="monitor" class="w-6 h-6 text-white"></i>
-                        </div>
+                        <div class="w-10 h-10 flex items-center justify-center">
+                        <img src="./assets/logo.png" alt="Dynamic Computer System Logo" class="w-10 h-10 object-contain">
+                    </div>
                         <div class="font-extrabold text-white text-lg"><?= e($biz['name']) ?></div>
                     </div>
                     <p class="text-gray-400">Your trusted partner for computers, laptops, and security solutions in Matara.</p>
-                    <div class="mt-4 flex items-center gap-3">
-                        <span class="text-gray-400 text-sm">Partners:</span>
-                        <img src="assets/images/partners/hikvision.png" alt="Hikvision" class="h-5 w-auto opacity-90">
-                        <img src="assets/images/partners/uniarch.png" alt="Uniarch" class="h-5 w-auto opacity-90">
-                    </div>
+                    
                 </div>
 
                 <div>
@@ -1027,7 +1010,7 @@ $waLink = 'https://wa.me/' . $waNumber;
 
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
                 <p class="mb-2">All products subject to availability. Prices may vary based on stock and market conditions.</p>
-                <p>&copy; <?= date('Y') ?> <?= e($biz['name']) ?>. All rights reserved.</p>
+                <p>&copy; <?= date('Y') ?> WebX Tech Solutions. All rights reserved.</p>
             </div>
         </div>
     </footer>
