@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /.git/
+
+Sitemap: https://www.dynamiccomputersystems.lk/sitemap.xml
