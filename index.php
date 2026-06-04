@@ -229,12 +229,18 @@ $businessSchema = [
     <meta property="og:title" content="<?= e($seoTitle) ?>">
     <meta property="og:description" content="<?= e($seoDescription) ?>">
     <meta property="og:url" content="<?= e($canonicalUrl) ?>">
-    <meta property="og:image" content="<?= e($heroImageUrl) ?>">
+    <meta property="og:image" content="<?= e($logoUrl) ?>">
+    <meta property="og:image:secure_url" content="<?= e($logoUrl) ?>">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="990">
+    <meta property="og:image:height" content="990">
+    <meta property="og:image:alt" content="<?= e($biz['name']) ?> logo">
     <meta property="og:locale" content="en_LK">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="<?= e($seoTitle) ?>">
     <meta name="twitter:description" content="<?= e($seoDescription) ?>">
-    <meta name="twitter:image" content="<?= e($heroImageUrl) ?>">
+    <meta name="twitter:image" content="<?= e($logoUrl) ?>">
+    <meta name="twitter:image:alt" content="<?= e($biz['name']) ?> logo">
     <link rel="icon" type="image/png" sizes="48x48" href="<?= e($faviconUrl) ?>">
     <link rel="icon" type="image/png" sizes="192x192" href="<?= e($favicon192Url) ?>">
     <link rel="icon" type="image/x-icon" href="<?= e($canonicalUrl) ?>assets/favicon.ico">
