@@ -125,6 +125,8 @@ $telLink = 'tel:' . preg_replace('/\s+/', '', $biz['phone']);
 $canonicalUrl = rtrim($biz['site_url'], '/') . '/';
 $heroImageUrl = $canonicalUrl . 'assets/images/hero/first-first-pc-1.jpg';
 $logoUrl = $canonicalUrl . 'assets/logo.png';
+$faviconUrl = $canonicalUrl . 'assets/favicon-48x48.png';
+$favicon192Url = $canonicalUrl . 'assets/android-chrome-192x192.png';
 $seoTitle = 'Computer Shop Matara | Custom PCs & CCTV | ' . $biz['name'];
 $seoDescription = 'Dynamic Computer System is a computer shop in Matara for custom PC builds, laptops, computer parts, repairs, networking, and CCTV installation for homes and businesses.';
 $businessSchema = [
@@ -233,11 +235,13 @@ $businessSchema = [
     <meta name="twitter:title" content="<?= e($seoTitle) ?>">
     <meta name="twitter:description" content="<?= e($seoDescription) ?>">
     <meta name="twitter:image" content="<?= e($heroImageUrl) ?>">
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-    <link rel="manifest" href="./assets/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="48x48" href="<?= e($faviconUrl) ?>">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?= e($favicon192Url) ?>">
+    <link rel="icon" type="image/x-icon" href="<?= e($canonicalUrl) ?>assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= e($canonicalUrl) ?>assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= e($canonicalUrl) ?>assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= e($canonicalUrl) ?>assets/apple-touch-icon.png">
+    <link rel="manifest" href="<?= e($canonicalUrl) ?>assets/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
     <script type="application/ld+json">
         <?= json_encode($businessSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
