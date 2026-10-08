@@ -131,7 +131,7 @@ $waLink = 'https://wa.me/' . $waNumber;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= e($biz['name']) ?> | Computers, Custom PC Builds & CCTV in Matara</title>
-    <meta name="description" content="Custom PC builds, laptops, genuine computer parts, repairs, networking, and professional CCTV installation in Matara, Sri Lanka. CCTV partners: Hikvision & Uniarch.">
+    <meta name="description" content="Custom PC builds, laptops, genuine computer parts, repairs, networking, and professional CCTV installation in Matara, Sri Lanka. CCTV camera sales and installation for homes, offices and commercial premises in Matara. Brands: UNV (Uniview) and Uniarch.">
 
     <!-- Tailwind CDN (fast setup). For production, compile Tailwind for best performance. -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -142,6 +142,113 @@ $waLink = 'https://wa.me/' . $waNumber;
     <style>
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 88px;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            letter-spacing: -0.035em;
+        }
+
+        section > div > .text-center.mb-14 h2 {
+            font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+            line-height: 1.15;
+            color: #0f172a;
+        }
+
+        body > nav {
+            box-shadow: 0 4px 24px rgb(15 23 42 / 5%);
+        }
+
+        section .bg-white.rounded-2xl,
+        #contact .bg-white {
+            border-color: #e2e8f0;
+            box-shadow: 0 8px 32px rgb(15 23 42 / 5%);
+        }
+
+        a, button {
+            transition-duration: 220ms;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid #60a5fa;
+            outline-offset: 4px;
+        }
+
+        #cctv {
+            background: linear-gradient(180deg, #f8fafc, #eff6ff 55%, #f8fafc);
+        }
+
+        .cctv-solution-card {
+            transition: transform 250ms ease, box-shadow 250ms ease;
+        }
+
+        .cctv-solution-image {
+            position: relative;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(ellipse at center, #ffffff 30%, #e8f0fb 100%);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .cctv-solution-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 28px 36px;
+        }
+
+        .cctv-solution-label {
+            position: absolute;
+            top: 18px;
+            left: 20px;
+            padding: 6px 12px;
+            border: 1px solid #dbeafe;
+            border-radius: 999px;
+            background: rgb(255 255 255 / 92%);
+            color: #1d4ed8;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .cctv-solution-card h3 {
+            font-size: clamp(1.25rem, 2vw, 1.6rem);
+            line-height: 1.3;
+        }
+
+        .cctv-solution-card li svg {
+            flex-shrink: 0;
+        }
+
+        #contact iframe {
+            width: 100%;
+        }
+
+        @media (hover: hover) {
+            .cctv-solution-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 18px 40px rgb(15 23 42 / 10%);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .cctv-solution-image { height: 220px; }
+            .cctv-solution-card > .p-8 { padding: 24px; }
+            #home .mt-10 > .flex.items-center.gap-4,
+            #cctv .flex.items-center.gap-6 { flex-wrap: wrap; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .cctv-solution-card { transition: none; }
+            .cctv-solution-card:hover { transform: none; }
         }
     </style>
 </head>
@@ -224,7 +331,7 @@ $waLink = 'https://wa.me/' . $waNumber;
 
                     <p class="mt-6 text-lg sm:text-xl text-blue-100 leading-relaxed">
                         Your trusted partner for <b>custom PC builds</b>, <b>laptops</b>, <b>genuine computer parts</b>,
-                        and <b>professional CCTV installation</b> in <b>Matara, Sri Lanka</b>.
+                        and <b>CCTV camera sales and installation</b> in <b>Matara, Sri Lanka</b>.
                     </p>
 
                     <div class="mt-8 flex flex-col sm:flex-row gap-4">
@@ -258,14 +365,14 @@ $waLink = 'https://wa.me/' . $waNumber;
 
                     <!-- Partner strip -->
                     <div class="mt-10">
-                        <div class="text-blue-100 text-sm font-semibold mb-3">CCTV Partners</div>
+                        <div class="text-blue-100 text-sm font-semibold mb-3">CCTV Brands</div>
                         <div class="flex items-center gap-4">
                             <div class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 flex items-center gap-3">
-                                <img src="assets/images/partners/hikvision.png" alt="Hikvision" class="h-6 w-auto">
-                                <span class="text-white text-sm font-semibold">Hikvision</span>
+                                <img src="assets/partners/UNV.png" alt="UNV (Uniview)" class="h-6 w-auto">
+                                <span class="text-white text-sm font-semibold">UNV (Uniview)</span>
                             </div>
                             <div class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 flex items-center gap-3">
-                                <img src="assets/images/partners/uniarch.png" alt="Uniarch" class="h-6 w-auto">
+                                <i data-lucide="video" class="h-6 w-6 text-white" aria-hidden="true"></i>
                                 <span class="text-white text-sm font-semibold">Uniarch</span>
                             </div>
                         </div>
@@ -386,27 +493,27 @@ $waLink = 'https://wa.me/' . $waNumber;
                 </div>
 
                 <div class="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-red-200 hover:shadow-2xl transition">
-                    <img src="assets/images/products/cctv.jpg" alt="CCTV Cameras" class="w-full h-44 object-cover" loading="lazy">
+                    <img src="assets/cctv/unv-ipc2122sb-bullet-camera.webp" alt="UNV bullet CCTV camera" class="w-full h-44 object-contain bg-gray-50" loading="lazy" decoding="async">
                     <div class="p-7">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center">
                                 <i data-lucide="video" class="w-6 h-6 text-red-600"></i>
                             </div>
-                            <h3 class="text-2xl font-bold">CCTV Cameras</h3>
+                            <h3 class="text-2xl font-bold">UNV & Uniarch CCTV Cameras</h3>
                         </div>
                         <ul class="mt-4 text-gray-600 space-y-2">
-                            <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-600 rounded-full"></span>Indoor & Outdoor Cameras</li>
-                            <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-600 rounded-full"></span>Night Vision Cameras</li>
-                            <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-600 rounded-full"></span>DVR & NVR Systems</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-600 rounded-full"></span>IP Cameras for Home, Office & Commercial Use</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-600 rounded-full"></span>Camera Selection Based on Your Site</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-600 rounded-full"></span>NVR Systems & Remote Viewing Options</li>
                         </ul>
                         <a href="#contact" class="mt-5 inline-flex items-center gap-2 text-red-600 font-semibold group-hover:translate-x-1 transition">
-                            Get a site survey <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                            Request a CCTV Quote <i data-lucide="chevron-right" class="w-5 h-5"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-teal-200 hover:shadow-2xl transition">
-                    <img src="assets/images/products/networking.jpg" alt="Networking" class="w-full h-44 object-cover" loading="lazy">
+                    <img src="assets/images/products/unv-nsw2020-network-switch.webp" alt="UNV NSW2020-6T-POE-IN Ethernet network switch" class="w-full h-44 object-contain bg-gray-50" loading="lazy" decoding="async">
                     <div class="p-7">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center">
@@ -427,7 +534,7 @@ $waLink = 'https://wa.me/' . $waNumber;
 
                 <!-- Extra creative card (NEW) -->
                 <div class="group bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden border border-gray-800 hover:shadow-2xl transition">
-                    <img src="assets/images/products/service-counter.jpg" alt="Shop Service Desk" class="w-full h-44 object-cover opacity-90" loading="lazy">
+                    <img src="assets/about/shop.jpg" alt="Dynamic Computer Systems shop in Matara" class="w-full h-44 object-cover opacity-90" loading="lazy" decoding="async">
                     <div class="p-7">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
@@ -463,8 +570,8 @@ $waLink = 'https://wa.me/' . $waNumber;
                     ['icon' => 'monitor', 'title' => 'Custom PC Building', 'desc' => 'Tailored gaming, workstation, and home PCs built to your exact specs and budget.'],
                     ['icon' => 'wrench', 'title' => 'PC Repair & Upgrades', 'desc' => 'Diagnosis, repairs, hardware upgrades, cleaning, and optimization services.'],
                     ['icon' => 'laptop', 'title' => 'Laptop Sales & Setup', 'desc' => 'Laptops with complete setup, software install, and configuration.'],
-                    ['icon' => 'video', 'title' => 'CCTV Sales', 'desc' => 'Quality CCTV cameras and systems for home and business security.'],
-                    ['icon' => 'shield', 'title' => 'CCTV Installation', 'desc' => 'Professional site survey, installation, setup, and user training.'],
+                    ['icon' => 'video', 'title' => 'CCTV Camera Sales', 'desc' => 'UNV (Uniview) and Uniarch IP cameras and NVR systems for homes, offices and commercial premises in Matara.'],
+                    ['icon' => 'shield', 'title' => 'CCTV Installation in Matara', 'desc' => 'Site surveys, camera installation and NVR setup, with remote viewing configuration where supported by the selected system.'],
                     ['icon' => 'wifi', 'title' => 'Network Setup', 'desc' => 'WiFi installation, router configuration, structured cabling & troubleshooting.'],
                 ];
                 foreach ($serviceCards as $card):
@@ -635,8 +742,8 @@ $waLink = 'https://wa.me/' . $waNumber;
     <section id="cctv" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
-                <h2 class="text-4xl font-extrabold">CCTV Solutions</h2>
-                <p class="text-lg text-gray-600 mt-3">Professional security systems for homes and businesses.</p>
+                <h2 class="text-4xl font-extrabold">CCTV Camera Sales & Installation in Matara</h2>
+                <p class="text-lg text-gray-600 mt-3">UNV (Uniview) and Uniarch CCTV solutions for homes, offices and commercial premises.</p>
             </div>
 
             <!-- Partner section (NEW) -->
@@ -645,64 +752,96 @@ $waLink = 'https://wa.me/' . $waNumber;
                     <div>
                         <h3 class="text-2xl font-extrabold flex items-center gap-2">
                             <i data-lucide="badge-check" class="w-6 h-6 text-blue-600"></i>
-                            CCTV Partners: Hikvision & Uniarch
+                            CCTV Brands: UNV (Uniview) & Uniarch
                         </h3>
                         <p class="text-gray-600 mt-2 leading-relaxed max-w-2xl">
-                            We provide CCTV solutions using trusted brands <b>Hikvision</b> and <b>Uniarch</b> — ideal for reliable
-                            night vision, clear recording, and stable remote viewing.
+                            Explore <b>UNV (Uniview)</b> and <b>Uniarch</b> IP cameras and NVR systems for your property in Matara.
+                            Ask us about camera selection, installation and remote viewing options supported by your chosen equipment.
                         </p>
                     </div>
                     <div class="flex items-center gap-6">
                         <div class="bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 flex items-center gap-3">
-                            <img src="./assets/partners/Hikvision.png" alt="Hikvision" class="h-8 w-auto">
-                            <span class="font-bold">Hikvision</span>
+                            <img src="./assets/partners/UNV.png" alt="UNV (Uniview)" class="h-8 w-auto">
+                            <span class="font-bold">UNV (Uniview)</span>
                         </div>
                         <div class="bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 flex items-center gap-3">
-                            <img src="./assets/partners/UNV.png" alt="Uniarch" class="h-8 w-auto">
+                            <i data-lucide="video" class="h-8 w-8 text-blue-600" aria-hidden="true"></i>
                             <span class="font-bold">Uniarch</span>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- CCTV product categories -->
+            <div class="grid grid-cols-1 min-[360px]:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10">
+                <?php
+                $cctvCategories = [
+                    ['title' => 'UNV CCTV Cameras', 'image' => 'assets/cctv/unv-ipc2122sb-bullet-camera.webp', 'alt' => 'UNV IPC2122SB-ADF28KM-DL-I1 bullet CCTV camera', 'desc' => 'Explore UNV (Uniview) camera options for your home, office or commercial premises.'],
+                    ['title' => 'Uniarch CCTV Cameras', 'image' => 'assets/cctv/uniarch-ipc-b112-bullet-camera.webp', 'alt' => 'Uniarch IPC-B112-PF28(40) bullet CCTV camera', 'desc' => 'Ask about Uniarch cameras and suitable options for your property in Matara.'],
+                    ['title' => 'NVR Recording Systems', 'image' => 'assets/cctv/unv-nvr301-04s3-p4-recorder.webp', 'alt' => 'UNV NVR301-04S3-P4 network video recorder', 'desc' => 'Discuss NVR recording systems, camera compatibility and your storage needs.'],
+                    ['title' => 'CCTV Accessories & Installation', 'image' => 'assets/cctv/unv-tr-jb12-in-cctv-junction-box.webp', 'alt' => 'UNV TR-JB12-IN CCTV camera junction box for installation', 'desc' => 'Enquire about CCTV cabling, accessories and installation for your site in Matara.'],
+                ];
+                foreach ($cctvCategories as $category):
+                ?>
+                    <div class="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-blue-200 hover:shadow-2xl transition flex flex-col">
+                        <div class="w-full h-44 bg-gray-50 flex flex-col items-center justify-center gap-3 px-4 text-center">
+                            <img src="<?= e($category['image']) ?>" alt="<?= e($category['alt']) ?>" width="640" height="280" loading="lazy" decoding="async" class="w-full h-full object-contain">
+                        </div>
+                        <div class="p-4 sm:p-6 flex flex-col flex-1">
+                            <h3 class="text-lg sm:text-xl font-bold"><?= e($category['title']) ?></h3>
+                            <p class="text-sm sm:text-base text-gray-600 mt-3 leading-relaxed flex-1"><?= e($category['desc']) ?></p>
+                            <a href="#contact" aria-label="Enquire about <?= e($category['title']) ?>" class="mt-5 block bg-blue-600 text-white px-3 py-3 rounded-xl hover:bg-blue-700 transition text-center font-semibold text-sm">
+                                Enquire Now
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                    <img src="./assets/cctv/h9c.webp" alt="Home CCTV Setup" class="w-full h-56 object-cover" loading="lazy">
+                <div class="cctv-solution-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                    <div class="cctv-solution-image">
+                        <img src="./assets/cctv/uniarch-ipc-b112-bullet-camera.webp" alt="Uniarch IPC-B112-PF28(40) bullet camera for home CCTV enquiries" width="334" height="228" loading="lazy" decoding="async">
+                        <span class="cctv-solution-label">HOME SECURITY · UNIARCH</span>
+                    </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-extrabold flex items-center gap-2">
                             <i data-lucide="video" class="w-7 h-7 text-blue-600"></i>
-                            For Home
+                            Home CCTV Solutions
                         </h3>
                         <ul class="mt-5 space-y-3 text-gray-700">
-                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>HD night vision cameras for 24/7 monitoring</li>
-                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Remote viewing via smartphone app</li>
-                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Motion detection alerts</li>
-                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Weatherproof outdoor cameras</li>
-                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Warranty + installation support</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>UNV and Uniarch camera sales for homes in Matara</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Remote viewing setup where supported by the selected system</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>IP camera and NVR selection based on your needs</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Camera placement planned for entrances and key areas</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Request a quote for equipment and installation</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                    <img src="./assets/cctv/h9c.webp" alt="Business CCTV Setup" class="w-full h-56 object-cover" loading="lazy">
+                <div class="cctv-solution-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                    <div class="cctv-solution-image">
+                        <img src="./assets/cctv/unv-ipc2122sb-bullet-camera.webp" alt="UNV IPC2122SB-ADF28KM-DL-I1 bullet camera for office and commercial CCTV enquiries" width="600" height="338" loading="lazy" decoding="async">
+                        <span class="cctv-solution-label">OFFICE & COMMERCIAL · UNV</span>
+                    </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-extrabold flex items-center gap-2">
                             <i data-lucide="shield" class="w-7 h-7 text-blue-600"></i>
-                            For Business
+                            Office & Commercial CCTV Solutions
                         </h3>
                         <ul class="mt-5 space-y-3 text-gray-700">
-                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Multi-camera systems with central monitoring</li>
-                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>High-capacity storage for extended recording</li>
-                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Smart features (model dependent)</li>
-                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Professional-grade installation & cable management</li>
-                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Maintenance support options</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>CCTV planning for offices, shops and commercial premises</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>NVR and storage selection based on recording requirements</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>IP camera options from UNV (Uniview) and Uniarch</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Camera installation, cabling and system setup in Matara</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>Discuss remote viewing compatibility before purchase</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="bg-white rounded-2xl shadow-md border border-gray-100 p-8">
-                <h3 class="text-2xl font-extrabold text-center">Our Installation Process</h3>
+                <h3 class="text-2xl font-extrabold text-center">CCTV Installation Process in Matara</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                     <div class="text-center">
                         <div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-extrabold mx-auto">1</div>
@@ -730,7 +869,7 @@ $waLink = 'https://wa.me/' . $waNumber;
                         <p class="text-gray-600 mt-1">A few examples of builds & installations.</p>
                     </div>
                     <a href="#contact" class="hidden sm:inline-flex items-center gap-2 text-blue-600 font-semibold">
-                        Book a site visit <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        Book a CCTV Site Visit <i data-lucide="chevron-right" class="w-5 h-5"></i>
                     </a>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -989,9 +1128,9 @@ $waLink = 'https://wa.me/' . $waNumber;
                     </div>
                     <p class="text-gray-400">Your trusted partner for computers, laptops, and security solutions in Matara.</p>
                     <div class="mt-4 flex items-center gap-3">
-                        <span class="text-gray-400 text-sm">Partners:</span>
-                        <img src="assets/images/partners/hikvision.png" alt="Hikvision" class="h-5 w-auto opacity-90">
-                        <img src="assets/images/partners/uniarch.png" alt="Uniarch" class="h-5 w-auto opacity-90">
+                        <span class="text-gray-400 text-sm">CCTV brands:</span>
+                        <img src="assets/partners/UNV.png" alt="UNV (Uniview)" class="h-5 w-auto opacity-90">
+                        <span class="text-sm opacity-90">Uniarch</span>
                     </div>
                 </div>
 
